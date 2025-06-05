@@ -2,7 +2,7 @@
 
 This project simulates a collaborative content creation process for a B2B content agency. It uses Claude models to roleplay key team members: Account Manager, Writer, Editor, and Fact Checker. 
 
-AI team members can make decisions at various points in the workflow and the fact checker can access Google Search through the SerpAPI. But they operate sequentially as part of a predetermined workflow. 
+AI team members can make decisions at various points in the process and the fact checker can access Google Search through the SerpAPI. But they operate sequentially as part of a predetermined workflow; they are not always on and do not operate concurrently.
 
 The code was created by ChatGPT and tested in my local environment. It's a work in progress--there is major room for improvement--and results will vary A LOT depending on how you tweak the prompts and which Claude models you choose. 
 
