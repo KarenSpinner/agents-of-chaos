@@ -9,7 +9,7 @@ The code was created by ChatGPT and tested in my local environment. It's a work 
 ## Project Structure
 
 ```plaintext
-.
+
 ├── agent_runner.py        # Sends prompts to Claude and returns structured JSON
 ├── workflow.py            # Orchestrates the agent interactions in sequence
 ├── prompts.py             # Stores role-specific system prompts
@@ -19,6 +19,7 @@ The code was created by ChatGPT and tested in my local environment. It's a work 
 ├── run.py                 # Entry point to run the entire pipeline
 ├── .env                   # Stores your Claude API key (not tracked by Git)
 └── README.md              # This file
+```
 
 **## Agents**
 
