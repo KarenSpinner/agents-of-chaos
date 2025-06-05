@@ -6,7 +6,7 @@ AI team members can make decisions at various points in the workflow and the fac
 
 The code was created by ChatGPT and tested in my local environment. It's a work in progress--there is major room for improvement--and results will vary A LOT depending on how you tweak the prompts and which Claude models you choose. 
 
-## Project Structure
+## Project structure
 
 ```plaintext
 
@@ -17,8 +17,11 @@ The code was created by ChatGPT and tested in my local environment. It's a work 
 ├── utils.py               # Handles markdown file creation and sanitization
 ├── save_results.py        # Saves each step of the workflow to Markdown
 ├── run.py                 # Entry point to run the entire pipeline
+├── brief.md               # Saved copy of the brief the writer is expected to follow
 ├── .env                   # Stores your Claude API key (not tracked by Git)
+
 └── README.md              # This file
+
 ```
 
 ## Agents
@@ -37,7 +40,7 @@ Checks for tone, structure, and alignment with the brief. Can iterate up to 3 ti
 **Fact Checker**
 Flags unsupported claims and suggests corrections backed by external sources.
 
-## Workflow Overview
+## Workflow overview
 
 Start with a creative brief (creative_brief)
 
@@ -55,7 +58,11 @@ All output and intermediate feedback are saved as Markdown for easy review.
 
 ## Set up
 
-You will need API keys from Anthropic and SerpAPI. These should be stored in your .emv file. *Never put API keys directly in your code!*
+You will need API keys from Anthropic and SerpAPI. These should be stored in a .env file. *Never put API keys directly in your code!*
+
+Your .env file should look like this: 
+ANTHROPIC_API_KEY=YOUR KEY HERE
+SERP_API_KEY=YOUR KEY HERE
 
 You will need to install Python and these libraries: anthropic, python-dotenv, requests, and serpapi
 
@@ -63,5 +70,13 @@ Ask your favorite LLM how to access the command line and install Python on your 
 
 pip install anthropic python-dotenv requests serpapi 
 
+If you want to **customize the prompts** and tweak the agents' instructions and personalities, edit **prompt.py** 
 
+If you want to update the assignment, edit **brief.md** Otherwise the workflow will run for the default project--an atyicle on how to edit AI-generated text. 😄
 
+## Start the workflow
+
+You can run the workflow from the command line like this:
+python run.py
+
+Let me know how it goes!
